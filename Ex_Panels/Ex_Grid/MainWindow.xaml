@@ -1,0 +1,46 @@
+﻿<Window x:Class="Ex_Grid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ex_Grid"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--<Label Grid.Row="0" Grid.Column="0"
+               FontSize="14">Configuration</Label>-->
+
+        <GroupBox Header="Démarrage"
+                  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+        <GroupBox Header="Option"
+                  Grid.Row="1" Grid.Column="0"/>
+
+        <GroupBox Header="Commencer"
+                  Grid.Row="1" Grid.Column="1" Grid.RowSpan="2"
+                  Background="Beige">
+            <ListBox>
+                <ListBoxItem>Section 1</ListBoxItem>
+                <ListBoxItem>Section 2</ListBoxItem>
+                <ListBoxItem>Section 3</ListBoxItem>
+                <ListBoxItem>Section 4</ListBoxItem>
+            </ListBox>
+        </GroupBox>
+
+        <GroupBox Header="Récent"
+                  Grid.Row="2" Grid.Column="0">
+
+        </GroupBox>
+    </Grid>
+</Window>

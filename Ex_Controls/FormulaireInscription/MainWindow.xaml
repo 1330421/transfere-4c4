@@ -1,0 +1,132 @@
+﻿<Window x:Class="FormulaireInscription.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FormulaireInscription"
+        mc:Ignorable="d"
+        Title="Formulaire d'inscription" Height="730" Width="400">
+    <Grid>
+        <Label Content="Nouveau participant"
+               HorizontalAlignment="Center" VerticalAlignment="Top"
+               Width="192" Margin="93,10,107,0"
+               FontSize="16" FontWeight="Bold"
+               Foreground="#ff260088" Background="Transparent"/>
+
+        <Label Content="Nom :"
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Width="65" Margin="19,47,0,0"/>
+        <TextBox Name="txtNom"
+                 Loaded="TxtNom_Focus"
+                 HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Width="120" Height="23" Margin="126,47,0,0"
+                 TextWrapping="Wrap"/>
+
+        <Label Content="Prénom :"
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Width="65" Margin="10,77,0,0"/>
+        <TextBox Name="txtPrenom"
+                 GotFocus="TxtPrenom_GotFocus"
+                 HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Width="120" Height="23" Margin="126,77,0,601"
+                 TextWrapping="Wrap"/>
+
+        <Label Content="Date de naissance :"
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Width="105" Margin="10,115,0,0"/>
+        <Calendar Name="cld1"
+                  HorizontalAlignment="Left" VerticalAlignment="Top"
+                  Margin="126,112,0,0"/>
+
+        <Label Content="Adresse courriel :"
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+               Width="120" Margin="10,285,0,0"/>
+        <TextBox Name="txtEmail" Text="exemple@exemple.ex"
+                 MouseDoubleClick="TxtEmail_MouseDoubleClick"
+                 LostFocus="TxtEmail_LostFocus"
+                 HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Width="120" Height="23" Margin="135,287,0,0"
+                 TextWrapping="Wrap" Foreground="Gray"/>
+
+        <Label Content="Région :"
+            HorizontalAlignment="Left" VerticalAlignment="Top"
+            Width="120" Margin="8,325,0,0"/>
+        <ComboBox Name="cboRegion"
+                  HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Width="120" Margin="126,328,0,0">
+            <ComboBoxItem Content="Laurentides"
+                          IsSelected="True"/>
+            <ComboBoxItem Content="Laval"/>
+            <ComboBoxItem Content="Lanaudière"/>
+            <ComboBoxItem Content="Montréal"/>
+        </ComboBox>
+
+        <Label Content="Statut professionnel"
+               HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Width="120" Margin="8,357,0,0"/>
+        <CheckBox Name="chk1" Content="Étudiant"
+                  IsThreeState="True"
+                  HorizontalAlignment="Left"  VerticalAlignment="Top"
+                  Margin="135,367,0,0"/>
+        <CheckBox Name="chk2" Content="Salarié"
+                  IsThreeState="True"
+                  HorizontalAlignment="Left" VerticalAlignment="Top"
+                  Margin="135,387,0,0"/>
+        <CheckBox Name="chk3" Content="Recherche de travail"
+                  IsThreeState="True"
+                  HorizontalAlignment="Left" VerticalAlignment="Top"
+                  Margin="135,407,0,0"/>
+
+        <Label Content="État matrimonial :"
+               HorizontalAlignment="Left" VerticalAlignment="Top"
+                Width="107" Margin="8,427,0,0"/>
+        <RadioButton Name="rdb1" Content="Célibataire" GroupName="etat"
+                     HorizontalAlignment="Left" VerticalAlignment="Top"
+                     Margin="126,434,0,0"/>
+        <RadioButton Name="rdb2" Content="Fiancé" GroupName="etat"
+                     HorizontalAlignment="Left" VerticalAlignment="Top"
+                     Margin="208,434,0,0"/>
+        <RadioButton Name="rdb3" Content="Marié" GroupName="etat"
+                     HorizontalAlignment="Left" VerticalAlignment="Top"
+                     Margin="280,434,0,0"/>
+
+
+        <Label Content="Langage de programmation préféré ( 2 ou + ) :"
+               HorizontalAlignment="Left" VerticalAlignment="Top" 
+               Width="296" Margin="8,451,0,0"/>
+        <ListBox Name="lsbInit" SelectionMode="Multiple"
+                 HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Width="130" Height="153" Margin="15,482,0,0">
+            <ListBoxItem>C#</ListBoxItem>
+            <ListBoxItem>Java</ListBoxItem>
+            <ListBoxItem>Python</ListBoxItem>
+            <ListBoxItem>Ruby</ListBoxItem>
+            <ListBoxItem>Visual Basic .NET</ListBoxItem>
+            <ListBoxItem>JavaScript</ListBoxItem>
+            <ListBoxItem>Swift</ListBoxItem>
+            <ListBoxItem>Kotlin</ListBoxItem>
+        </ListBox>
+        
+        <ListBox Name="lsbFin" SelectionMode="Multiple"
+                 HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Width="125" Height="153" Margin="240,482,0,0"/>
+
+        <Button Name="btnCopier" Content="Copier >>"
+                Click="BtnCopier_Click"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Width="75" Margin="154,515,0,0"/>
+        <Button Name="btnVider" Content="Vider &lt;&lt;"
+                Click="BtnVider_Click"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Width="75" Margin="154,561,0,0"/>
+        <Button Name="btnAnnuler" Content="Annuler"
+                Click="BtnAnnuler_Click"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Width="75" Margin="93,660,0,0"/>
+        <Button Name="btnValider" Content="Valider"
+                Click="BtnValider_Click"
+                HorizontalAlignment="Left" VerticalAlignment="Top"
+                Width="75" Margin="210,660,0,0"/>
+
+    </Grid>
+</Window>

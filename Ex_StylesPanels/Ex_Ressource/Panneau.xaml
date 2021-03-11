@@ -1,0 +1,32 @@
+﻿<Window x:Class="Ex_Ressource.Panneau"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ex_Ressource"
+        mc:Ignorable="d"
+        Title="Panneau" Height="300" Width="400" Background="{StaticResource windowBackgroundBrush}">
+
+    <Canvas HorizontalAlignment="Right" Width="275">
+        <Label Content="Nom Produit" Canvas.Left="23" Canvas.Top="10" Width="135"/>
+        <TextBox Width="100" Height="25"
+                 Canvas.Top="50" Canvas.Left="25"/>
+        
+
+        <Label Content="Références" Canvas.Left="23" Canvas.Top="75" Width="135"/>
+        <TextBox Width="100" Height="25" 
+                 Canvas.Top="105" Canvas.Left="25"/>
+        
+        <Label Content="Quantité" Canvas.Left="23" Canvas.Top="137" Width="135"/>
+        <TextBox Height="25" Canvas.Left="25" Text="TextBox" Canvas.Top="174" Width="100"/>
+        
+        <Button Content="Rechercher" Canvas.Left="175" Canvas.Top="50" Width="75"/>
+        <Button Content="Noueveau" Canvas.Left="175" Canvas.Top="75" Width="75"/>
+        <Button Content="Enregister" Canvas.Left="175" Canvas.Top="100" Width="75"/>
+        <Button Content="Supprimer" Canvas.Left="175" Canvas.Top="125" Width="75"/>
+       
+        <Button Content="Fermer"
+                Width="100" Height="25"
+                Canvas.Bottom="25" Canvas.Right="25"/>
+    </Canvas>
+</Window>
